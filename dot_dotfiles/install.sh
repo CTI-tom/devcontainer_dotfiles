@@ -27,6 +27,9 @@ function go_home {
         cd $HOME
 }
 
+#Temporary fix
+export PATH="$HOME/bin:$PATH"
+
 echo ""
 echo "====================================================================="
 echo " Setting up codespaces environment"
@@ -58,5 +61,6 @@ cd $HOME/bin
 chmod a+x ./nvim
 ./nvim --appimage-extract
 ./squashfs-root/AppRun --version
-sudo ln -s $HOME/bin/squashfs-root/AppRun /usr/bin/nvim
+rm ./nvim
+sudo ln -s $HOME/bin/squashfs-root/AppRun $HOME/bin/nvim
 #Test
