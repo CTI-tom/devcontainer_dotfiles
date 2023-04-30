@@ -59,3 +59,4 @@ chmod a+x ./nvim
 ./nvim --appimage-extract
 ./squashfs-root/AppRun --version
 sudo ln -s $HOME/bin/squashfs-root/AppRun /usr/bin/nvim
+#Test
