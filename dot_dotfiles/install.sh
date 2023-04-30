@@ -53,8 +53,8 @@ curl -L https://github.com/junegunn/fzf/releases/download/${FZF_VERSION}/fzf-${F
 
 # Install neovim
 NVIM_VERSION=0.9.0
-sudo add-apt-repository universe
-sudo apt-get install -y libfuse2
 curl -L -o $HOME/bin/nvim https://github.com/neovim/neovim/releases/download/v${NVIM_VERSION}/nvim.appimage
-chmod a+x $HOME/bin/nvim
-sudo ln -s ~/$HOME/bin/nvim /usr/bin/nvim
+cd $HOME/bin/nvim
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+sudo ln -s /squashfs-root/Apprun /usr/bin/nvim
