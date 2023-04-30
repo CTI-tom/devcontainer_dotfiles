@@ -55,6 +55,7 @@ curl -L https://github.com/junegunn/fzf/releases/download/${FZF_VERSION}/fzf-${F
 NVIM_VERSION=0.9.0
 curl -L -o $HOME/bin/nvim https://github.com/neovim/neovim/releases/download/v${NVIM_VERSION}/nvim.appimage
 cd $HOME/bin/nvim
-./nvim.appimage --appimage-extract
+chmod a+x ./nvim
+./nvim --appimage-extract
 ./squashfs-root/AppRun --version
-sudo ln -s /squashfs-root/Apprun /usr/bin/nvim
+sudo ln -s $HOME/bin/squashfs-root/AppRun /usr/bin/nvim
