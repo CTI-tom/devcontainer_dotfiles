@@ -63,3 +63,5 @@ chmod a+x ./nvim
 ./squashfs-root/AppRun --version
 rm ./nvim
 sudo ln -s $HOME/bin/squashfs-root/AppRun $HOME/bin/nvim
+
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
